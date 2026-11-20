@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Deformable Proprioceptive Membrane for Real-Time 3D Shape Reconstruction</title>
   <meta name="description" content="A stretchable optical waveguide membrane that reconstructs 3D surface geometry in real time at 90 Hz with millimeter-level accuracy.">
-  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="canonical" href="https://proprioceptive-membrane.github.io/">
+  <meta property="og:url" content="https://proprioceptive-membrane.github.io/">
+  <link rel="stylesheet" href="static/css/style.css?v=914cd5264a">
   <link rel="icon" href="static/images/logo.svg" type="image/svg+xml">
 </head>
 <body>
@@ -14,10 +16,10 @@
 <nav class="site-nav" id="siteNav">
   <div class="nav-inner">
     <div class="nav-logos">
-      <img src="static/images/hdr_lab_logo.png" alt="HDR Lab" class="nav-logo-hdr">
       <img src="static/images/lumos-centered-rays.svg" alt="PHAROS" class="nav-logo-project">
+      <img src="static/images/hdr_lab_logo.png" alt="HDR Lab" class="nav-logo-hdr">
     </div>
-    <span class="nav-title">A membrane that reconstructs its own shape</span>
+    <span class="nav-title" aria-hidden="true">A membrane that reconstructs its own shape</span>
     <div class="nav-links">
       <a href="#teaser">Demo</a>
       <a href="#abstract">Abstract</a>
@@ -30,15 +32,14 @@
 <!-- ==================== HERO (Full-page with animated Fig1D background) ==================== -->
 <header class="hero" id="hero">
   <div class="hero-bg-track" id="heroBgTrack">
-    <!-- TODO: Replace with high-res individual photos when available -->
-    <img src="static/images/fig1d_idle.png" alt="" class="hero-bg-img">
-    <img src="static/images/fig1d_bend.png" alt="" class="hero-bg-img">
-    <img src="static/images/fig1d_twist.png" alt="" class="hero-bg-img">
-    <img src="static/images/fig1d_stretch.png" alt="" class="hero-bg-img">
-    <img src="static/images/fig1d_idle.png" alt="" class="hero-bg-img">
-    <img src="static/images/fig1d_bend.png" alt="" class="hero-bg-img">
-    <img src="static/images/fig1d_twist.png" alt="" class="hero-bg-img">
-    <img src="static/images/fig1d_stretch.png" alt="" class="hero-bg-img">
+    <img src="hero-background/idle.jpg" alt="" class="hero-bg-img">
+    <img src="hero-background/bending.jpg" alt="" class="hero-bg-img">
+    <img src="hero-background/twisting.jpg" alt="" class="hero-bg-img">
+    <img src="hero-background/stretching.jpg" alt="" class="hero-bg-img">
+    <img src="hero-background/idle.jpg" alt="" class="hero-bg-img">
+    <img src="hero-background/bending.jpg" alt="" class="hero-bg-img">
+    <img src="hero-background/twisting.jpg" alt="" class="hero-bg-img">
+    <img src="hero-background/stretching.jpg" alt="" class="hero-bg-img">
   </div>
   <div class="hero-overlay"></div>
   <div class="container hero-content">
@@ -56,11 +57,11 @@
         <a href="#">Dezhong Tong</a>,
         <a href="#">Xiaonan Huang</a><span class="equal-contrib">*</span>
       </p>
-      <p class="hero-affiliation">Hybrid Dynamic Robotics Lab, Robotics Department, University of Michigan</p>
+      <p class="hero-affiliation"><a href="https://soft.robotics.umich.edu/" target="_blank" rel="noopener noreferrer">Hybrid Dynamic Robotics Lab</a>, Robotics Department, University of Michigan</p>
 
       <div class="asset-links">
         <a href="https://arxiv.org/abs/2601.13574" class="asset-link" target="_blank">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.5 2A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2h-17zM8 7h2.4l1.6 4 1.6-4H16l-2.8 5.5L16 18h-2.4L12 13.5 10.4 18H8l2.8-5.5L8 7z"/></svg>
+          <svg viewBox="20 0 420 520" aria-hidden="true"><path transform="translate(0 450) scale(1 -1)" d="M62.2578 439.994v0.000976563c8.7373 -0.208008 17.0049 -10.248 17.0049 -10.248l139.339 -133.672l101.071 91.6465l0.19043 0.172852l0.203125 0.166016c4.90625 4.81934 11.3877 7.70312 18.252 8.12207l0.00585938 0.0185547 c1.05957 -0.00195312 2.11816 -0.0712891 3.16699 -0.211914c10.166 -2.4209 18.7891 -9.11816 23.6465 -18.3701c4.01758 -9.88574 0.291016 -17.6826 -7.50195 -27.8057l-0.102539 -0.139648l-0.115234 -0.132812l-87.1963 -102.987l25.2568 -24.2285 c17.0928 -15.6211 17.002 -42.5723 -0.197266 -58.0762l-23.0615 -21.4434l128.783 -155.019c6.05273 -6.27637 8.49609 -15.2041 6.48145 -23.6885c-2.51465 -9.04297 -9.44238 -16.1914 -18.4004 -18.9902c-2.37793 -0.728516 -4.84863 -1.10254 -7.33496 -1.1084 c-6.88184 0.109375 -13.4678 2.83105 -18.4189 7.61035l-146.593 139.609l-95.1221 -88.4375c-3.72852 -4.63086 -9.30664 -7.38672 -15.249 -7.53516c-9.27832 -0.0908203 -17.6777 5.47754 -21.209 14.0586c-3.46777 8.33105 0.375 19.9385 6.58398 26.5527 l79.9766 98.2344l-28.6631 27.3008c-19.292 19.2861 -18.4004 47.1162 2.33984 67.8516l24.6191 23.0391s-111.243 133.583 -122.178 149.671c-7.46582 10.6934 -9.91016 16.4219 -6.50586 24.5918c3.57715 8.33398 11.8613 13.6562 20.9277 13.4473zM338.319 388.78 v-0.0214844c-5.18945 -0.473633 -10.0342 -2.79199 -13.6592 -6.53516l-100.681 -91.3047l40.8809 -39.2197l86.8916 102.64c8.05957 10.4746 8.75195 14.9609 6.50488 20.4824c-3.83691 6.77344 -10.2119 11.7451 -17.7188 13.8105 c-0.735352 0.0976562 -1.47754 0.145508 -2.21875 0.148438zM175.076 246.873l-24.623 -23.041c-16.8564 -16.8564 -19.4756 -39.8701 -2.15918 -57.1865l220.151 -209.691c3.5752 -3.45898 8.32031 -5.44336 13.293 -5.56152 c1.75293 0.00292969 3.49512 0.266602 5.1709 0.78418c6.58887 2.0752 11.6631 7.36914 13.4629 14.0381c1.83984 6.0957 -0.860352 11.5049 -5.18066 16.9141z"/></svg>
           Paper
         </a>
         <a href="https://github.com/GuanyuXu04/PHAROS" class="asset-link" target="_blank">
@@ -68,11 +69,11 @@
           Code
         </a>
         <a href="https://huggingface.co/datasets/xuguanyu04/PHAROS-data" class="asset-link" target="_blank">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 4.5c.83 0 1.5.67 1.5 1.5S11.83 9.5 11 9.5 9.5 8.83 9.5 8s.67-1.5 1.5-1.5zm2 0c.83 0 1.5.67 1.5 1.5S13.83 9.5 13 9.5 11.5 8.83 11.5 8s.67-1.5 1.5-1.5zM7 14c0-2.76 2.24-5 5-5s5 2.24 5 5H7z"/></svg>
+          <img src="static/images/huggingface.svg" class="huggingface-icon" alt="" aria-hidden="true">
           Data
         </a>
         <a href="static/pdfs/poster.pdf" class="asset-link" target="_blank">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 16H5V5h14v14zm-7-2h2v-4h3l-4-4-4 4h3v4z"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l5 5v15H5V2zm8 1v5h5" fill="none" stroke="currentColor" stroke-width="1.5"/><text x="6.5" y="17" font-family="Arial,sans-serif" font-size="6" font-weight="700">PDF</text></svg>
           Poster
         </a>
       </div>
@@ -130,15 +131,17 @@
 <section id="fabrication">
   <div class="container">
     <div class="section-header reveal">
-      <h2>Layer-by-Layer Fabrication</h2>
+      <h2>Sensor Fabrication</h2>
       <p>A 10-step manufacturing process embeds liquid-metal circuits and optoelectronics inside a cast silicone waveguide.</p>
     </div>
 
     <div class="fab-timeline">
       <div class="fab-step">
         <div class="fab-step-dot"></div>
-        <!-- TODO: Re-crop without dashed border, separate top/side views, provide high-res assets -->
-        <div class="fab-step-img"><img src="static/images/fig3_A_top.png" alt="Step A"></div>
+        <div class="fab-step-img">
+          <img class="fab-view-side" src="static/images/fig3_A_side.png" alt="Step A: side view" loading="lazy">
+          <img class="fab-view-top" src="static/images/fig3_A_top.png" alt="Step A: top view" loading="lazy">
+        </div>
         <div class="fab-step-content">
           <span class="fab-step-label">Step A</span>
           <div class="fab-step-title">Spin-coat black cladding</div>
@@ -147,7 +150,10 @@
       </div>
       <div class="fab-step">
         <div class="fab-step-dot"></div>
-        <div class="fab-step-img"><img src="static/images/fig3_B_top.png" alt="Step B"></div>
+        <div class="fab-step-img">
+          <img class="fab-view-side" src="static/images/fig3_B_side.png" alt="Step B: side view" loading="lazy">
+          <img class="fab-view-top" src="static/images/fig3_B_top.png" alt="Step B: top view" loading="lazy">
+        </div>
         <div class="fab-step-content">
           <span class="fab-step-label">Step B</span>
           <div class="fab-step-title">Spin-coat white reflective layer</div>
@@ -156,7 +162,10 @@
       </div>
       <div class="fab-step">
         <div class="fab-step-dot"></div>
-        <div class="fab-step-img"><img src="static/images/fig3_C_top.png" alt="Step C"></div>
+        <div class="fab-step-img">
+          <img class="fab-view-side" src="static/images/fig3_C_side.png" alt="Step C: side view" loading="lazy">
+          <img class="fab-view-top" src="static/images/fig3_C_top.png" alt="Step C: top view" loading="lazy">
+        </div>
         <div class="fab-step-content">
           <span class="fab-step-label">Step C</span>
           <div class="fab-step-title">Apply VHB substrate</div>
@@ -165,7 +174,10 @@
       </div>
       <div class="fab-step">
         <div class="fab-step-dot"></div>
-        <div class="fab-step-img"><img src="static/images/fig3_D_top.png" alt="Step D"></div>
+        <div class="fab-step-img">
+          <img class="fab-view-side" src="static/images/fig3_D_side.png" alt="Step D: side view" loading="lazy">
+          <img class="fab-view-top" src="static/images/fig3_D_top.png" alt="Step D: top view" loading="lazy">
+        </div>
         <div class="fab-step-content">
           <span class="fab-step-label">Step D</span>
           <div class="fab-step-title">Laser-cut circuit traces</div>
@@ -174,7 +186,10 @@
       </div>
       <div class="fab-step">
         <div class="fab-step-dot"></div>
-        <div class="fab-step-img"><img src="static/images/fig3_E_top.png" alt="Step E"></div>
+        <div class="fab-step-img">
+          <img class="fab-view-side" src="static/images/fig3_E_side.png" alt="Step E: side view" loading="lazy">
+          <img class="fab-view-top" src="static/images/fig3_E_top.png" alt="Step E: top view" loading="lazy">
+        </div>
         <div class="fab-step-content">
           <span class="fab-step-label">Step E</span>
           <div class="fab-step-title">Paint liquid metal (OGaIn)</div>
@@ -183,7 +198,10 @@
       </div>
       <div class="fab-step">
         <div class="fab-step-dot"></div>
-        <div class="fab-step-img"><img src="static/images/fig3_F_top.png" alt="Step F"></div>
+        <div class="fab-step-img">
+          <img class="fab-view-side" src="static/images/fig3_F_side.png" alt="Step F: side view" loading="lazy">
+          <img class="fab-view-top" src="static/images/fig3_F_top.png" alt="Step F: top view" loading="lazy">
+        </div>
         <div class="fab-step-content">
           <span class="fab-step-label">Step F</span>
           <div class="fab-step-title">Peel release liner</div>
@@ -192,7 +210,10 @@
       </div>
       <div class="fab-step">
         <div class="fab-step-dot"></div>
-        <div class="fab-step-img"><img src="static/images/fig3_G_top.png" alt="Step G"></div>
+        <div class="fab-step-img">
+          <img class="fab-view-side" src="static/images/fig3_G_side.png" alt="Step G: side view" loading="lazy">
+          <img class="fab-view-top" src="static/images/fig3_G_top.png" alt="Step G: top view" loading="lazy">
+        </div>
         <div class="fab-step-content">
           <span class="fab-step-label">Step G</span>
           <div class="fab-step-title">Place LEDs and PDs</div>
@@ -201,7 +222,10 @@
       </div>
       <div class="fab-step">
         <div class="fab-step-dot"></div>
-        <div class="fab-step-img"><img src="static/images/fig3_H_top.png" alt="Step H"></div>
+        <div class="fab-step-img">
+          <img class="fab-view-side" src="static/images/fig3_H_side.png" alt="Step H: side view" loading="lazy">
+          <img class="fab-view-top" src="static/images/fig3_H_top.png" alt="Step H: top view" loading="lazy">
+        </div>
         <div class="fab-step-content">
           <span class="fab-step-label">Step H</span>
           <div class="fab-step-title">Cast transparent core</div>
@@ -210,7 +234,10 @@
       </div>
       <div class="fab-step">
         <div class="fab-step-dot"></div>
-        <div class="fab-step-img"><img src="static/images/fig3_I_top.png" alt="Step I"></div>
+        <div class="fab-step-img">
+          <img class="fab-view-side" src="static/images/fig3_I_side.png" alt="Step I: side view" loading="lazy">
+          <img class="fab-view-top" src="static/images/fig3_I_top.png" alt="Step I: top view" loading="lazy">
+        </div>
         <div class="fab-step-content">
           <span class="fab-step-label">Step I</span>
           <div class="fab-step-title">Cast top reflective layer</div>
@@ -219,7 +246,10 @@
       </div>
       <div class="fab-step">
         <div class="fab-step-dot"></div>
-        <div class="fab-step-img"><img src="static/images/fig3_J_top.png" alt="Step J"></div>
+        <div class="fab-step-img">
+          <img class="fab-view-side" src="static/images/fig3_J_side.png" alt="Step J: side view" loading="lazy">
+          <img class="fab-view-top" src="static/images/fig3_J_top.png" alt="Step J: top view" loading="lazy">
+        </div>
         <div class="fab-step-content">
           <span class="fab-step-label">Step J</span>
           <div class="fab-step-title">Cast top cladding &amp; demold</div>
@@ -241,19 +271,19 @@
     <!-- Figure 4-based pipeline: fade in left to right -->
     <div class="nn-pipeline reveal" id="nnPipeline">
       <div class="nn-fig-block" data-delay="0">
-        <img src="static/images/fig4_input.png" alt="Normalized Photodiode Signals">
+        <img src="static/images/fig4_input_b5b828b8ef.png" alt="Normalized Photodiode Signals" width="1356" height="1333">
       </div>
       <div class="nn-fig-arrow" data-delay="400">
         <svg viewBox="0 0 48 24"><path d="M0 12h40m-8-8l8 8-8 8" stroke="currentColor" stroke-width="2.5" fill="none"/></svg>
       </div>
       <div class="nn-fig-block" data-delay="800">
-        <img src="static/images/fig4_network.png" alt="Neural Network">
+        <img src="static/images/fig4_network_405e20a2c6.png" alt="Neural Network" width="2016" height="1333">
       </div>
       <div class="nn-fig-arrow" data-delay="1200">
         <svg viewBox="0 0 48 24"><path d="M0 12h40m-8-8l8 8-8 8" stroke="currentColor" stroke-width="2.5" fill="none"/></svg>
       </div>
       <div class="nn-fig-block" data-delay="1600">
-        <img src="static/images/fig4_output.png" alt="Predicted Point Cloud">
+        <img src="static/images/fig4_output_366378c6c6.png" alt="Predicted Point Cloud" width="1356" height="1333">
       </div>
     </div>
 
@@ -303,7 +333,6 @@
     <div class="results-tabs reveal">
       <button class="results-tab active" data-panel="panel-indentation">Indentation Reconstruction</button>
       <button class="results-tab" data-panel="panel-stretching">Stretching Reconstruction</button>
-      <button class="results-tab" data-panel="panel-quantitative">Quantitative Results</button>
     </div>
 
     <!-- Panel: Indentation -->
@@ -349,8 +378,9 @@
       </p>
     </div>
 
-    <!-- Panel: Quantitative -->
-    <div id="panel-quantitative" class="results-panel">
+    <!-- Quantitative results remain expanded within Results. -->
+    <div id="panel-quantitative" class="results-quantitative">
+      <h3 class="results-subheading">Quantitative Results</h3>
       <div class="result-figure transparent-bg">
         <img src="static/images/fig8_raw.png" alt="Reconstruction error and localization error statistics">
       </div>
@@ -447,7 +477,7 @@
 <!-- ==================== FOOTER ==================== -->
 <footer class="site-footer">
   <div class="container">
-    <p>Hybrid Dynamic Robotics Lab, Robotics Department, University of Michigan</p>
+    <p class="footer-affiliation"><a href="https://soft.robotics.umich.edu/" target="_blank" rel="noopener noreferrer">Hybrid Dynamic Robotics Lab</a>, Robotics Department, University of Michigan</p>
     <p style="margin-top:8px">
       Page template adapted from <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
     </p>

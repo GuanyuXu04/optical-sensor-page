@@ -25,38 +25,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Smooth subtitle → navbar crossfade driven by scroll position
+  // One persistent title: scroll 1:1 with the page, pin, reveal, then slide into its slot.
   const nav = document.getElementById('siteNav');
   const hero = document.getElementById('hero');
   const heroSubtitle = document.getElementById('heroSubtitle');
-  if (nav && hero) {
+  const navTitle = nav?.querySelector('.nav-title');
+  if (nav && hero && heroSubtitle && navTitle) {
+    const slot = document.createElement('div');
+    slot.className = 'hero-subtitle-slot';
+    heroSubtitle.before(slot);
+    let geometry;
     let ticking = false;
+    const clamp = value => Math.max(0, Math.min(1, value));
+    const ease = value => value * value * (3 - 2 * value);
+    const measure = () => {
+      slot.append(heroSubtitle);
+      heroSubtitle.classList.remove('is-floating');
+      heroSubtitle.removeAttribute('style');
+      slot.style.width = '';
+      slot.style.height = '';
+      // Use the destination width from the beginning so wrapping never jumps.
+      const target = navTitle.getBoundingClientRect();
+      heroSubtitle.style.width = `${target.width}px`;
+      const source = heroSubtitle.getBoundingClientRect();
+      slot.style.width = `${source.width}px`;
+      slot.style.height = `${source.height}px`;
+      geometry = {
+        x: source.left, y: source.top + window.scrollY,
+        targetX: target.left, targetY: target.top,
+        riseEnd: Math.max(0, source.top + window.scrollY - target.top),
+        revealLength: Math.max(70, hero.offsetHeight * 0.12),
+        dockLength: Math.max(130, hero.offsetHeight * 0.22)
+      };
+      document.body.append(heroSubtitle);
+      heroSubtitle.classList.add('is-floating');
+      heroSubtitle.style.left = '0';
+      heroSubtitle.style.top = '0';
+      updateNav();
+    };
     const updateNav = () => {
-      const heroH = hero.offsetHeight;
-      const scrolled = window.scrollY;
-      const start = heroH * 0.55;
-      const end = heroH * 0.85;
-
-      if (scrolled <= start) {
-        nav.style.opacity = '0';
-        nav.style.pointerEvents = 'none';
-        if (heroSubtitle) heroSubtitle.style.opacity = '1';
-      } else if (scrolled >= end) {
-        nav.style.opacity = '1';
-        nav.style.pointerEvents = 'auto';
-        if (heroSubtitle) heroSubtitle.style.opacity = '0';
-      } else {
-        const p = (scrolled - start) / (end - start);
-        nav.style.opacity = p;
-        nav.style.pointerEvents = p > 0.5 ? 'auto' : 'none';
-        if (heroSubtitle) heroSubtitle.style.opacity = 1 - p;
-      }
+      if (!geometry) return;
+      const g = geometry;
+      const scroll = window.scrollY;
+      // Match normal document scrolling exactly until the title reaches the navbar.
+      const reveal = clamp((scroll - g.riseEnd) / g.revealLength);
+      const dock = ease(clamp((scroll - g.riseEnd - g.revealLength) / g.dockLength));
+      const x = g.x + (g.targetX - g.x) * dock;
+      const y = Math.max(g.targetY, g.y - scroll);
+      heroSubtitle.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      nav.style.opacity = String(reveal);
+      nav.style.pointerEvents = reveal === 1 ? 'auto' : 'none';
+      nav.inert = reveal < 1;
       ticking = false;
     };
     window.addEventListener('scroll', () => {
       if (!ticking) { ticking = true; requestAnimationFrame(updateNav); }
     }, { passive: true });
-    updateNav();
+    window.addEventListener('resize', measure);
+    document.fonts.ready.then(measure);
+    measure();
   }
 
   // Results tabs
